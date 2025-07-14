@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رسالة مصالحة ♥</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Cairo', Arial, sans-serif;
+      background: url('assets/background.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .container {
+      background: linear-gradient(135deg, #fff6f6 60%, #ffe3e3 100%);
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+      padding: 32px 20px 24px 20px;
+      max-width: 350px;
+      width: 90vw;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .container img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+      box-shadow: 0 0 0 6px #ffb4b4, 0 2px 16px rgba(230,57,70,0.10);
+      animation: pulse 2.2s infinite;
+      transition: box-shadow 0.3s;
+    }
+    .lover-name {
+      font-size: 1.1rem;
+      color: #e63946;
+      margin-bottom: 12px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-shadow: 0 1px 6px #fff2;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 6px #ffb4b4, 0 2px 16px rgba(230,57,70,0.10); }
+      50% { box-shadow: 0 0 0 18px #ffe3e3, 0 2px 24px rgba(230,57,70,0.18); }
+      100% { box-shadow: 0 0 0 6px #ffb4b4, 0 2px 16px rgba(230,57,70,0.10); }
+    }
+    h1 {
+      color: #e63946;
+      margin: 0 0 12px 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    p {
+      color: #333;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+    .heart-btn {
+      background: linear-gradient(90deg, #e63946 60%, #ffb4a2 100%);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 32px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(230,57,70,0.12);
+      transition: background 0.3s, transform 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    .heart-btn .btn-heart {
+      font-size: 1.3em;
+      animation: btn-heart-pulse 1.2s infinite;
+      display: inline-block;
+      transition: transform 0.2s;
+    }
+    .heart-btn:active .btn-heart {
+      animation: shake 0.3s;
+    }
+    @keyframes btn-heart-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+    }
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-2px); }
+      50% { transform: translateX(2px); }
+      75% { transform: translateX(-2px); }
+      100% { transform: translateX(0); }
+    }
+    .heart-btn:hover {
+      background: linear-gradient(90deg, #ffb4a2 60%, #e63946 100%);
+      transform: scale(1.05);
+    }
+    /* قلوب متحركة */
+    .hearts {
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 0;
+      pointer-events: none;
+      z-index: 10;
+      opacity: 0.35;
+    }
+    .heart {
+      position: absolute;
+      left: 50%;
+      top: 80%;
+      font-size: 2.2rem;
+      opacity: 0.7;
+      transform: translate(-50%, 0) scale(1);
+      animation: float 4s linear infinite, pulse-heart 1.8s infinite;
+      user-select: none;
+      pointer-events: none;
+    }
+    .heart:nth-child(2) {
+      left: 30%;
+      animation-delay: 1s;
+      opacity: 0.5;
+      font-size: 1.7rem;
+      transform: translate(-50%, 0) scale(0.8);
+    }
+    .heart:nth-child(3) {
+      left: 70%;
+      animation-delay: 2s;
+      opacity: 0.6;
+      font-size: 2.5rem;
+      transform: translate(-50%, 0) scale(1.2);
+    }
+    .heart:nth-child(4) {
+      left: 20%;
+      animation-delay: 2.5s;
+      opacity: 0.4;
+      font-size: 1.3rem;
+      transform: translate(-50%, 0) scale(0.7);
+    }
+    .heart:nth-child(5) {
+      left: 80%;
+      animation-delay: 3s;
+      opacity: 0.5;
+      font-size: 2rem;
+      transform: translate(-50%, 0) scale(1.1);
+    }
+    @keyframes float {
+      0% { top: 80%; opacity: 0.7; }
+      80% { opacity: 0.8; }
+      100% { top: 10%; opacity: 0; }
+    }
+    @keyframes pulse-heart {
+      0%, 100% { filter: brightness(1) drop-shadow(0 0 0 #e63946); }
+      50% { filter: brightness(1.2) drop-shadow(0 0 8px #e63946aa); }
+    }
+    @media (max-width: 500px) {
+      .container {
+        padding: 18px 6vw 16px 6vw;
+        max-width: 98vw;
+      }
+      h1 { font-size: 1.3rem; }
+      p { font-size: 1rem; }
+      .container img { width: 150px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hearts">
+      <div class="heart">❤️</div>
+      <div class="heart">❤️</div>
+      <div class="heart">❤️</div>
+      <div class="heart">❤️</div>
+      <div class="heart">❤️</div>
+    </div>
+    <img src="assets/Amira.png" alt="حبيبتي">
+    <div class="lover-name">أميرة</div>
+    <h1>أعتذر منكِ من كل قلبي ♥</h1>
+    <p>
+      أعلم أنني أخطأت، وأشعر بالندم الشديد. أنتِ أغلى ما أملك في حياتي، ولا أريد أن أخسرك أبدًا.<br>
+      سامحيني وامنحيني فرصة جديدة لنبدأ من جديد معًا.<br>
+      أحبك جدًا ♥
+    </p>
+    <button class="heart-btn" onclick="alert('أحبك للأبد ♥')">
+      <span class="btn-heart">❤️</span>
+      اضغطي هنا إذا سامحتيني
+    </button>
+  </div>
+</body>
+</html>
